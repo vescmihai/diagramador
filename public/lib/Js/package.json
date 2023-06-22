@@ -1,0 +1,11 @@
+{
+  "name": "joint-kitchen-sink",
+  "version": "3.5.0",
+  "description": "The Kitchen Sink Application for JointJS+",
+  "main": "index.html",
+  "scripts": {},
+  "author": "client IO",
+  "license": "http://jointjs.com/license/rappid",
+  "private": true,
+  "devDependencies": {}
+}

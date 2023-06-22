@@ -1,0 +1,217 @@
+#app {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font-family: sans-serif;
+  overflow: hidden;
+  /*
+      ***  ui.Dialog ***
+  */
+  /*
+      ***  ui.Inspector ***
+  */
+}
+#app .canvas {
+ /*  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;*/
+  background-image: radial-gradient(#000 1px, transparent 2px);
+  background-size: 20px 20px;
+  width: 80%; /* Ajusta el ancho según tus necesidades */
+  height: 89%; /* Ajusta la altura según tus necesidades */
+  
+}
+#app .canvas .joint-element {
+  filter: drop-shadow(0.1rem 0.1rem 0.15rem rgba(0, 0, 0, 0.2));
+}
+#app .canvas [magnet=item]:hover,
+#app .canvas .column-connected {
+  fill: #efefef;
+  stroke: #dddddd;
+}
+#app .canvas .source-arrowhead,
+#app .canvas .target-arrowhead {
+  fill: #A0A0A0;
+  stroke-width: 1;
+}
+#app .joint-dialog.joint-theme-default .body {
+  padding: 0;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+#app .joint-dialog.joint-theme-default .fg {
+  border: none;
+  border-radius: 0px;
+  filter: drop-shadow(0.1rem 0.1rem 0.15rem rgba(0, 0, 0, 0.2));
+}
+#app .joint-dialog.joint-theme-default .titlebar {
+  padding: 16px;
+  border-radius: 0px;
+  color: #3D3D3D;
+  background: #FFF;
+  border: none;
+  border-bottom: 1px solid #dddddd;
+  font-size: 20px;
+}
+#app .joint-dialog.joint-theme-default .titlebar .titletab {
+  height: 5px;
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 100%;
+}
+#app .joint-dialog.joint-theme-default .controls {
+  border: none;
+  border-top: 1px solid #dddddd;
+}
+#app .joint-dialog.joint-theme-default .controls .control-button {
+  color: #303030;
+  border: 1px solid #CCC;
+  background: #FFF;
+  border-radius: 0px;
+  min-width: 82px;
+}
+#app .joint-dialog.joint-theme-default .controls .control-button:hover {
+  border: 1px solid #CCC;
+  background: #CCC;
+  opacity: 0.8;
+  transition: 0.1s linear;
+}
+#app .joint-dialog.joint-theme-default .controls .control-button.left {
+  color: #F8F8FF;
+  background: #F6511D;
+  border: 1px solid #F6511D;
+}
+#app .joint-inspector.joint-theme-default {
+  border: none;
+  background: #FFF;
+  padding: 5px 16px;
+}
+#app .joint-inspector.joint-theme-default .field {
+  padding: 0;
+}
+#app .joint-inspector.joint-theme-default .list-item {
+  color: #636363;
+  background: #FFF;
+  border: none;
+  border-top: 1px solid #CCC;
+  box-shadow: none;
+  padding: 0;
+  padding-top: 12px;
+  padding-bottom: 16px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+#app .joint-inspector.joint-theme-default .btn-list-add,
+#app .joint-inspector.joint-theme-default .btn-list-del {
+  margin: 0;
+  height: 30px;
+  background: transparent;
+  color: #F8F8FF;
+  box-shadow: none;
+  border-radius: 0px;
+}
+#app .joint-inspector.joint-theme-default .btn-list-add:hover,
+#app .joint-inspector.joint-theme-default .btn-list-del:hover {
+  transition: 0.1s linear;
+}
+#app .joint-inspector.joint-theme-default .btn-list-add {
+  margin-top: 4px;
+  margin-bottom: 8px;
+  width: 100%;
+  background: #015EFF;
+  border: 1px solid #015EFF;
+}
+#app .joint-inspector.joint-theme-default .btn-list-add:hover {
+  opacity: 0.8;
+}
+#app .joint-inspector.joint-theme-default .btn-list-del {
+  order: 4;
+  align-self: flex-end;
+  margin-top: 8px;
+  text-align: center;
+  min-width: 82px;
+  color: #F6511D;
+  border: 1px solid #F6511D;
+}
+#app .joint-inspector.joint-theme-default .btn-list-del:hover {
+  color: #F8F8FF;
+  background: #F6511D;
+}
+#app .joint-inspector.joint-theme-default label,
+#app .joint-inspector.joint-theme-default output,
+#app .joint-inspector.joint-theme-default .units {
+  color: #3D3D3D;
+  text-transform: none;
+  text-shadow: none;
+  font-size: 12px;
+  margin: 0;
+  line-height: 28px;
+}
+#app .joint-inspector.joint-theme-default label:after {
+  content: "";
+}
+#app .joint-inspector.joint-theme-default input[type=text],
+#app .joint-inspector.joint-theme-default input[type=number],
+#app .joint-inspector.joint-theme-default textarea,
+#app .joint-inspector.joint-theme-default .content-editable,
+#app .joint-inspector.joint-theme-default select {
+  margin-bottom: 12px;
+  width: 100%;
+  height: auto;
+  line-height: 16px;
+  text-shadow: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  outline: none;
+  padding: 16px 12px;
+  overflow: auto;
+  color: #303030;
+  background: #FFF;
+  border: 1px solid #CCC;
+  border-radius: 0px;
+}
+#app .joint-inspector.joint-theme-default select {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="none" stroke-width="2" stroke="grey"><path d="M6 9l6 6 6-6"/></svg>');
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 50%;
+  background-origin: content-box;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+#app .joint-inspector.joint-theme-default select::-ms-expand {
+  display: none;
+}
+#app .joint-inspector.joint-theme-default input[type=color] {
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+#app .joint-inspector.joint-theme-default .toggle {
+  width: 40px;
+  height: 20px;
+}
+#app .joint-inspector.joint-theme-default .toggle span, #app .joint-inspector.joint-theme-default .toggle input:checked + span {
+  border: 1px solid #015EFF;
+  background: #015EFF;
+}
+#app .joint-inspector.joint-theme-default .toggle span, #app .joint-inspector.joint-theme-default .toggle input:not(:checked) + span {
+  border: 1px solid #CCC;
+  background: #CCC;
+}
+#app .joint-inspector.joint-theme-default .toggle span {
+  box-shadow: none;
+}
+#app .joint-inspector.joint-theme-default .toggle span i:before {
+  content: "";
+}
+#app .joint-inspector.joint-theme-default .toggle input:checked + span i:before {
+  content: "";
+}
+#app .joint-inspector.joint-theme-default .toggle span i {
+  background: #FFF;
+  transition: 0.2s;
+}
